@@ -20,11 +20,16 @@ public class Example3 {
         do {
             i+=3;
             tot+=i;
-        } while (i>=100);
+        } while(i>=100);
+        System.out.println("tot = "+tot);
 
-        System.out.println("tot : "+tot);
-
-
+        i = 0;
+        tot = 0;
+        while(i>=100){
+            i+=3;
+            tot+=i;
+        }
+        System.out.println("tot2 = "+tot);
 
 
 
