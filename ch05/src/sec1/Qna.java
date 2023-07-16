@@ -3,6 +3,8 @@ package sec1;
 public class Qna extends Board {
 
     public static final String DUMMY = "테스트글제목";
+    public static String DUMMY2 = "DUMMY2";
+    static String DUMMY3 = "DUMMY3";
 
 
     private int level; //
@@ -15,7 +17,7 @@ public class Qna extends Board {
     }
 
     public Qna(int no) {
-        super(1);
+        super(no);
     }
 
     public int getLevel() {
