@@ -55,7 +55,7 @@ public class ListEx4 {
                     System.out.println("과정 삭제\n");
                     System.out.println("삭제할 과정 번호 : ");
                     no = sc.nextInt();
-                    if(no<=num){
+                    if(no<= cList.size()){
                         String delName = cList.get(no).cname;
                         int delNo = cList.get(no).cno;
                         cList.remove(no);
