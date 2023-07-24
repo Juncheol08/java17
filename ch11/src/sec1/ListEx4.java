@@ -18,14 +18,12 @@ public class ListEx4 {
         boolean ck = true;  //과정 작업 상태 - true:계속, false:종료
         int i = 0;  //과정수
         while(ck){
-            System.out.println("-------------------------------");
-            System.out.println("1:등록 2:검색 3:삭제 4:조회");
-            System.out.print("작업 번호[1-6]: ");
+            System.out.println("작업 번호[1-6]:");
             int num = sc.nextInt();
             switch(num){
                 case 1:
                     i++;
-                    System.out.println("과정 등록 \n");
+                    System.out.println("과정 등록\n");
                     Course c = new Course();
                     c.cno = i;
                     System.out.println("과정이름 : ");
@@ -35,7 +33,6 @@ public class ListEx4 {
                     System.out.println("소요시간 : ");
                     c.ctime = sc.nextDouble();
                     cList.add(c);
-                    System.out.println("과정 등록 완료");
                     break;
                 case 2:
                     System.out.println("과정 검색\n");
@@ -55,20 +52,17 @@ public class ListEx4 {
                     System.out.println("과정 삭제\n");
                     System.out.println("삭제할 과정 번호 : ");
                     no = sc.nextInt();
-                    if(no<= cList.size()){
-                        String delName = cList.get(no).cname;
-                        int delNo = cList.get(no).cno;
-                        cList.remove(no);
-                        System.out.println("과정번호 : "+delNo+" / 과정명 : "+delName+" 삭제 완료");
+                    if(no<=num){
+                        cList.remove(i);
                     } else {
                         System.out.println("해당 과정이 존재하지 않습니다.");
                     }
                     break;
                 case 4:
                     System.out.println("과정 목록\n");
-                    System.out.println("번호\t이름\t수강료\t수강시간");
+                    System.out.println("과정번호\t과정이름\t수강료\t수강시간");
                     for(Course cr:cList){
-                        System.out.println(cr.cno+"\t\t"+cr.cname+"\t\t"+cr.cprice+"\t\t"+cr.ctime+"\t\t인덱스번호:"+cList.indexOf(cr));
+                        System.out.println(cr.cno+"\t"+cr.cname+"\t"+cr.cprice+"\t"+cr.ctime);
                     }
                     break;
                 case 5:
